@@ -62,7 +62,7 @@ document.querySelectorAll('.adicionar').forEach((botao) => {
     botao.addEventListener('click', () => {
         const idProduto = botao.getAttribute('data-produto');
         const nomeProduto = `Produto ${idProduto}`;
-        const precoProduto = parseFloat(botao.getAttribute('data-preco'));
+        const precoProduto = parseFloat(botao.getAttribute('data-preco')); // <-- PREÇO CERTO VINDO DO BOTÃO
 
         carrinho.push({ nome: nomeProduto, preco: precoProduto });
         atualizarCarrinho();
