@@ -62,9 +62,12 @@ nav ul li a:hover {
 
 /* Grid de produtos */
 .grid-produtos {
+    .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
     gap: 20px;
+}
+
 }
 
 /* Estilo dos produtos */
