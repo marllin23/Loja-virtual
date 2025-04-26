@@ -80,5 +80,18 @@ document.getElementById('carrinho-btn').addEventListener('click', () => {
     const carrinhoDiv = document.getElementById('carrinho');
     carrinhoDiv.style.display = carrinhoDiv.style.display === 'none' ? 'block' : 'none';
 });
+// Ação ao clicar em "Finalizar Compra"
+document.getElementById('finalizar-compra').addEventListener('click', () => {
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+    } else {
+        alert('Compra finalizada com sucesso! Obrigado pela preferência ❤️');
+        carrinho = []; // Limpa o carrinho
+        atualizarCarrinho(); // Atualiza o carrinho para zero
+        // Opcional: esconder o carrinho de novo
+        document.getElementById('carrinho').style.display = 'none';
+    }
+});
+
 
   
