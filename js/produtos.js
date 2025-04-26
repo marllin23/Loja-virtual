@@ -1,3 +1,6 @@
+const produtos = [
+    // Aqui você pode colocar novos produtos se quiser.
+];
 // Array para armazenar os produtos no carrinho
 let carrinho = [];
 
