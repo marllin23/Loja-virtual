@@ -68,7 +68,7 @@ document.getElementById('finalizar-compra').addEventListener('click', () => {
         
         // Desativa o botão de finalizar compra
         const finalizarCompraBtn = document.getElementById('finalizar-compra');
-        finalizarCompraBtn.disabled = true; // Desativa o botão
+       finalizarCompraBtn.style.display = 'none'; // Esconde o botão
         finalizarCompraBtn.textContent = 'Compra Finalizada'; // Muda o texto do botão
 
         // Limpar o carrinho após a compra
