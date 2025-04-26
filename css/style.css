@@ -47,13 +47,14 @@ nav ul li a:hover {
 
 /* Container principal da loja */
 .loja {
-    flex: 1;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    margin: 20px auto;
     padding: 20px;
     background-color: white;
-    margin: 20px auto;
     border: 10px solid black;
-    max-width: 1200px;
 }
+
 
 /* Seção de produtos */
 .conteudo {
@@ -61,12 +62,13 @@ nav ul li a:hover {
 }
 
 /* Grid de produtos */
-.grid-produtos {
     .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Exibe 3 colunas fixas */
+    gap: 20px; /* Espaço entre os produtos */
+    width: 100%; /* Garante que o grid ocupe toda a largura disponível */
 }
+
 
 }
 
