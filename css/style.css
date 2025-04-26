@@ -63,6 +63,7 @@ nav ul li a:hover {
 
 /* Grid de produtos */
 /* Estilo para o container de produtos (grid) */
+/* Estilo para o container de produtos (grid) */
 .grid-produtos {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
@@ -72,19 +73,19 @@ nav ul li a:hover {
 
 /* Estilo para cada produto */
 .produto {
-    border: 2px solid #333; /* Adiciona uma borda preta (o quadrado) em torno do produto */
+    border: 2px solid #333; /* Borda visível ao redor do produto */
     border-radius: 8px; /* Bordas arredondadas */
     padding: 15px;
     text-align: center;
     background-color: white; /* Fundo branco para o produto */
     transition: transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve para um efeito 3D */
-    margin: 10px; /* Espaçamento entre os produtos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para dar efeito de profundidade */
+    margin: 10px; /* Espaço entre os produtos */
 }
 
 /* Efeito hover para os produtos */
 .produto:hover {
-    transform: scale(1.05); /* Aumenta o tamanho quando o produto é hover */
+    transform: scale(1.05); /* Aumenta o tamanho do produto no hover */
 }
 
 /* Estilo das imagens dentro dos produtos */
@@ -94,6 +95,7 @@ nav ul li a:hover {
     max-height: 200px; /* Limita a altura máxima da imagem */
     object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
 }
+
 
 
 }
