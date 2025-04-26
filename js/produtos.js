@@ -33,20 +33,24 @@ function atualizarCarrinho() {
     const carrinhoBtn = document.getElementById('carrinho-btn');
     const totalElement = document.getElementById('total');
 
-    carrinhoProdutos.innerHTML = ''; // Limpa carrinho
+    carrinhoProdutos.innerHTML = '';
     let total = 0;
 
-    // Para cada produto no carrinho, cria um item visual
     carrinho.forEach((produto, index) => {
         const produtoDiv = document.createElement('div');
-        produtoDiv.classList.add('produto-carrinho');
+        produtoDiv.classList.add('produto');
         produtoDiv.innerHTML = `
-            <strong>${produto.nome}</strong> - R$ ${produto.preco.toFixed(2)}
+            <span>${produto.quantidade}x ${produto.nome}</span>
+            <span>R$ ${(produto.preco * produto.quantidade).toFixed(2)}</span>
             <button onclick="removerDoCarrinho(${index})">Remover</button>
         `;
         carrinhoProdutos.appendChild(produtoDiv);
-        total += produto.preco; // Soma preço
+        total += produto.preco * produto.quantidade;
     });
+
+    carrinhoBtn.textContent = `Carrinho (${carrinho.length})`;
+    totalElement.textContent = total.toFixed(2);
+}
 
     // Atualiza o número de itens no botão do carrinho
     carrinhoBtn.textContent = `Carrinho (${carrinho.length})`;
@@ -58,12 +62,21 @@ document.querySelectorAll('.adicionar').forEach((botao) => {
     botao.addEventListener('click', () => {
         const idProduto = botao.getAttribute('data-produto');
         const nomeProduto = `Produto ${idProduto}`;
-        const precoProduto = parseFloat(botao.getAttribute('data-preco')); // <-- PREÇO CERTO VINDO DO BOTÃO
+        const precoProduto = parseFloat(botao.getAttribute('data-preco'));
 
-        carrinho.push({ nome: nomeProduto, preco: precoProduto });
+        // Verifica se já tem esse produto no carrinho
+        const produtoExistente = carrinho.find(item => item.nome === nomeProduto);
+
+        if (produtoExistente) {
+            produtoExistente.quantidade += 1;
+        } else {
+            carrinho.push({ nome: nomeProduto, preco: precoProduto, quantidade: 1 });
+        }
+
         atualizarCarrinho();
     });
 });
+
 
 // Função para remover produto
 function removerDoCarrinho(index) {
