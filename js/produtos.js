@@ -4,6 +4,8 @@ const produtos = [
     { id: 3, nome: "Mochila Executiva", preco: 149.90, imagem: "https://via.placeholder.com/200x150" }
     
   ];
+console.log("Script carregado!");
+
   
   // Pega o elemento div onde os produtos vão aparecer
   const containerProdutos = document.getElementById('produtos');
