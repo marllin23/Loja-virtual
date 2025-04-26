@@ -6,10 +6,10 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o body ocupe 100% da altura da tela */
+    min-height: 100vh;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com o título */
 header {
     text-align: center;
     padding: 20px;
@@ -17,9 +17,37 @@ header {
     color: white;
 }
 
-/* Container principal para organizar o conteúdo */
+/* Menu de navegação */
+nav {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #00a86b;
+}
+
+/* Container principal da loja */
 .loja {
-    flex: 1; /* Permite que o conteúdo principal cresça e ocupe o restante da tela */
+    flex: 1;
     padding: 20px;
     background-color: white;
     margin: 20px auto;
