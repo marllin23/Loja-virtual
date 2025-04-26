@@ -21,6 +21,7 @@
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
+         <li><a href="#" id="carrinho-btn">Carrinho (0)</a></li>
     </ul>
 </nav>
 
@@ -36,7 +37,7 @@
         <img src="produto1.jpg" alt="Produto 1">
         <h2>Produto 1</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+        <button class="adicionar" data-produto="1">Adicionar ao Carrinho</button>
     </div>
 
     <!-- Produto 2 -->
@@ -44,7 +45,7 @@
         <img src="produto2.jpg" alt="Produto 2">
         <h2>Produto 2</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+         <button class="adicionar" data-produto="2">Adicionar ao Carrinho</button>
     </div>
 
     <!-- Produto 3 -->
@@ -52,7 +53,7 @@
         <img src="produto3.jpg" alt="Produto 3">
         <h2>Produto 3</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+          <button class="adicionar" data-produto="3">Adicionar ao Carrinho</button>
     </div>
 
     <!-- Produto 4 -->
@@ -60,7 +61,7 @@
         <img src="produto4.jpg" alt="Produto 4">
         <h2>Produto 4</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+       <button class="adicionar" data-produto="4">Adicionar ao Carrinho</button>
     </div>
 
     <!-- Produto 5 -->
@@ -68,7 +69,7 @@
         <img src="produto5.jpg" alt="Produto 5">
         <h2>Produto 5</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+          <button class="adicionar" data-produto="5">Adicionar ao Carrinho</button>
     </div>
     
     <!-- Produto 6 -->
@@ -76,10 +77,16 @@
         <img src="produto6.jpg" alt="Produto 6">
         <h2>Produto 6</h2>
         <p>Descrição do produto</p>
-        <button>Comprar</button>
+        <button class="adicionar" data-produto="6">Adicionar ao Carrinho</button>
 
                 <!-- Adicione mais produtos aqui -->
             </div>
+                    <div id="carrinho" style="display:none;">
+    <h2>Seu Carrinho</h2>
+    <div id="carrinho-produtos"></div>
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <button id="finalizar-compra">Finalizar Compra</button>
+</div>
         </section>
     </div>
 
