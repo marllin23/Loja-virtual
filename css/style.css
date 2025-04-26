@@ -128,3 +128,46 @@ footer {
     bottom: 0;
     clear: both;
 }
+/* Estilo para o botão do carrinho */
+#carrinho-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Estilo para o carrinho quando ele estiver visível */
+#carrinho {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrinho-produtos {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#carrinho-produtos .produto {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#carrinho-produtos .produto button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
