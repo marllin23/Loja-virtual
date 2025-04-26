@@ -39,7 +39,7 @@ document.querySelectorAll('.adicionar').forEach((botao) => {
     botao.addEventListener('click', () => {
         const idProduto = botao.getAttribute('data-produto');
         const nomeProduto = `Produto ${idProduto}`;
-        const precoProduto = parseFloat((Math.random() * (100 - 10) + 10).toFixed(2)); // Preço aleatório para exemplo
+      const precoProduto = parseFloat(botao.getAttribute('data-preco'));
 
         carrinho.push({ nome: nomeProduto, preco: precoProduto });
         atualizarCarrinho();
