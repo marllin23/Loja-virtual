@@ -1,4 +1,8 @@
-
+const produtos = [
+  { id: 1, nome: "Tênis Esportivo", preco: 199.90, imagem: "https://via.placeholder.com/200x150" },
+  { id: 2, nome: "Camiseta Casual", preco: 89.90, imagem: "https://via.placeholder.com/200x150" },
+  { id: 3, nome: "Mochila Executiva", preco: 149.90, imagem: "https://via.placeholder.com/200x150" }
+];
 console.log("Script carregado!");
 
   
