@@ -76,6 +76,7 @@ button:hover {
     background-color: #0056b3;
 }
 /* Corpo da página */
+/* Corpo da página */
 body {
     margin: 0;
     padding: 0;
@@ -83,17 +84,19 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que a altura da página seja no mínimo 100% da tela */
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
 }
 
 /* Container principal para organizar o conteúdo */
 .loja {
-    flex-grow: 1; /* Isso faz o conteúdo crescer para ocupar o espaço disponível */
+    flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço restante */
     padding: 20px;
     background-color: white;
     margin: 20px auto;
     border: 10px solid black;
     max-width: 1200px;
+    /* Você pode ajustar a altura do conteúdo, mas flex-grow garante que o conteúdo
+       ocupe o espaço disponível */
 }
 
 /* Rodapé */
@@ -102,9 +105,10 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 20px; /* Dá um espaçamento entre o conteúdo e o rodapé */
+    margin-top: 20px; /* Espaço entre o conteúdo e o rodapé */
+    width: 100%;
+    /* O rodapé será empurrado para baixo, devido ao uso do Flexbox */
 }
-
 
 
 
