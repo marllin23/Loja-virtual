@@ -106,7 +106,7 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 20px; /* Espaço entre o conteúdo e o rodapé */
-    width: 100%;
+    width: 400%;
     /* O rodapé será empurrado para baixo, devido ao uso do Flexbox */
 }
 
