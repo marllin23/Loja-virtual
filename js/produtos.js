@@ -66,6 +66,11 @@ document.getElementById('finalizar-compra').addEventListener('click', () => {
     } else {
         alert('Compra finalizada com sucesso!');
         // Limpar o carrinho após a compra
+      const finalizarCompraBtn = document.getElementById('finalizar-compra');
+        finalizarCompraBtn.disabled = true; // Desativa o botão
+        finalizarCompraBtn.textContent = 'Compra Finalizada'; // Muda o texto do botão
+
+        // Limpar o carrinho após a compra
         carrinho = [];
         atualizarCarrinho();
     }
